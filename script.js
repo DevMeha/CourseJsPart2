@@ -9,3 +9,16 @@ function logger() {
 // CASLLING/RUNNING /INVOKING FUNCTION
 
 logger();
+logger();
+logger();
+
+function fruitProcesor(apples, oranges) {
+  const juice = `juice with ${apples} apples and ${oranges} oranges.`;
+  return juice;
+}
+const appleJuce = fruitProcesor(5, 0);
+console.log(appleJuce);
+console.log(fruitProcesor(5, 0));
+console.log(appleJuce);
+const appleOrangeJuice = fruitProcesor(2, 4);
+console.log(appleOrangeJuice);
