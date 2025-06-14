@@ -55,14 +55,33 @@
 
 // FUNCTIONS CALLING OTHER FUNCTIONS
 
-function cutFruitPieces(fruit) {
-  return fruit * 4;
-}
+// function cutFruitPieces(fruit) {
+//   return fruit * 4;
+// }
 
-function fruitProcesor(apples, oranges) {
-  const applePieces = cutFruitPieces(apples);
-  const orangePieces = cutFruitPieces(oranges);
-  const juice = `juice with ${applePieces} apples and ${orangePieces} oranges.`;
-  return juice;
-}
-console.log(fruitProcesor(2, 3));
+// function fruitProcesor(apples, oranges) {
+//   const applePieces = cutFruitPieces(apples);
+//   const orangePieces = cutFruitPieces(oranges);
+//   const juice = `juice with ${applePieces} apples and ${orangePieces} oranges.`;
+//   return juice;
+// }
+// console.log(fruitProcesor(2, 3));
+
+// REVIEVING FUNCTIONS
+const calcAge = function (birthYear) {
+  return 2025 - birthYear;
+};
+
+const yearsUntilRetirement = function (birthYear, firstName) {
+  const age = calcAge(birthYear);
+  const retirement = 65 - age;
+  if (retirement > 0) {
+    console.log(`${firstName} retires in ${retirement}`);
+    return retirement;
+  } else {
+    console.log(`${firstName} has alredy retired`);
+    return -1;
+  }
+};
+yearsUntilRetirement(2005, "Adam");
+yearsUntilRetirement(1950, "Adam");
