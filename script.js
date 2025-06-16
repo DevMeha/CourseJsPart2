@@ -209,3 +209,7 @@ const tips = [
 
 // Wyświetlamy tablicę napiwków w konsoli
 console.log(tips); // ➡️ [18.75, 111, 8.8]
+
+const total = [tips[0] + bills[0], tips[1] + bills[1], tips[2] + bills[2]];
+
+console.log(`Total: ${total}`);
