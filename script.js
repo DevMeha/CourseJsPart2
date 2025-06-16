@@ -163,21 +163,49 @@
 
 // PUSH/POP/UNSHIFT/ IN ARRAY
 
-const Friends = ["Michael", "Steven", "Peter"];
-const newLenght = Friends.push("Jay");
-console.log(Friends);
-console.log(newLenght);
+// const Friends = ["Michael", "Steven", "Peter"];
+// const newLenght = Friends.push("Jay");
+// console.log(Friends);
+// console.log(newLenght);
 
-Friends.unshift("John");
-console.log(Friends);
+// Friends.unshift("John");
+// console.log(Friends);
 
-Friends.pop();
-const popped = Friends.pop();
-console.log(popped);
-console.log(Friends);
-Friends.shift();
-console.log(Friends);
-console.log(Friends.indexOf("Steven"));
-console.log(Friends.indexOf("BOB"));
+// Friends.pop();
+// const popped = Friends.pop();
+// console.log(popped);
+// console.log(Friends);
+// Friends.shift();
+// console.log(Friends);
+// console.log(Friends.indexOf("Steven"));
+// console.log(Friends.indexOf("BOB"));
 
-console.log(Friends.includes("Steven"));
+// console.log(Friends.includes("Steven"));
+
+// TEST
+
+// Tworzymy funkcję, która oblicza napiwek na podstawie kwoty rachunku
+function calcTip(bill) {
+  // Jeśli rachunek mieści się w przedziale od 50 do 300 (włącznie),
+  // zwróć 15% tej kwoty
+  if (bill >= 50 && bill <= 300) {
+    return bill * 0.15;
+  } else {
+    // W przeciwnym razie (mniej niż 50 lub więcej niż 300),
+    // zwróć 20% tej kwoty
+    return bill * 0.2;
+  }
+}
+
+// Tworzymy tablicę z trzema rachunkami
+const bills = [125, 555, 44];
+
+// Tworzymy tablicę z napiwkami, obliczonymi z każdego rachunku
+const tips = [
+  calcTip(bills[0]), // napiwek dla 125
+  calcTip(bills[1]), // napiwek dla 555
+  calcTip(bills[2]), // napiwek dla 44
+];
+
+// Wyświetlamy tablicę napiwków w konsoli
+console.log(tips); // ➡️ [18.75, 111, 8.8]
