@@ -184,32 +184,80 @@
 
 // TEST
 
-// Tworzymy funkcję, która oblicza napiwek na podstawie kwoty rachunku
-function calcTip(bill) {
-  // Jeśli rachunek mieści się w przedziale od 50 do 300 (włącznie),
-  // zwróć 15% tej kwoty
-  if (bill >= 50 && bill <= 300) {
-    return bill * 0.15;
-  } else {
-    // W przeciwnym razie (mniej niż 50 lub więcej niż 300),
-    // zwróć 20% tej kwoty
-    return bill * 0.2;
-  }
+// // Tworzymy funkcję, która oblicza napiwek na podstawie kwoty rachunku
+// function calcTip(bill) {
+//   // Jeśli rachunek mieści się w przedziale od 50 do 300 (włącznie),
+//   // zwróć 15% tej kwoty
+//   if (bill >= 50 && bill <= 300) {
+//     return bill * 0.15;
+//   } else {
+//     // W przeciwnym razie (mniej niż 50 lub więcej niż 300),
+//     // zwróć 20% tej kwoty
+//     return bill * 0.2;
+//   }
+// }
+
+// // Tworzymy tablicę z trzema rachunkami
+// const bills = [125, 555, 44];
+
+// // Tworzymy tablicę z napiwkami, obliczonymi z każdego rachunku
+// const tips = [
+//   calcTip(bills[0]), // napiwek dla 125
+//   calcTip(bills[1]), // napiwek dla  555
+//   calcTip(bills[2]), // napiwek dla 44
+// ];
+
+// // Wyświetlamy tablicę napiwków w konsoli
+// console.log(tips); // ➡️ [18.75, 111, 8.8]
+
+// const total = [tips[0] + bills[0], tips[1] + bills[1], tips[2] + bills[2]];
+
+// console.log(`Total: ${total}`);
+
+// OBJECT
+
+// const jonas = {
+//   firstName: "Jonas",
+//   lastName: "Schmedtmann",
+//   age: "techer",
+//   friends: ["Michael", "Peter", "Steven"],
+// };
+
+// DOT VS BRACKET NOTATION
+
+const jonas = {
+  firstName: "Jonas",
+  lastName: "Schmedtmann",
+  age: "techer",
+  friends: ["Michael", "Peter", "Steven"],
+};
+
+console.log(jonas.lastName);
+console.log(jonas["lastName"]);
+
+const nameKey = "Name";
+console.log(jonas["first" + nameKey]);
+console.log(jonas["last" + nameKey]);
+
+const interestedIn = prompt(
+  "what do you whant to know about Jonas? Chose between firstName, Lastname, age, job, and firends"
+);
+
+if (jonas[interestedIn]) {
+  console.log(jonas[interestedIn]);
+} else {
+  console.log(
+    "Wrong request!  Chose between firstName, Lastname, age, job, and firends"
+  );
 }
+jonas.location = "Portugal";
+jonas["twitter"] = "@jonasschmedtman";
+console.log(jonas);
 
-// Tworzymy tablicę z trzema rachunkami
-const bills = [125, 555, 44];
+// CHALLENGE
 
-// Tworzymy tablicę z napiwkami, obliczonymi z każdego rachunku
-const tips = [
-  calcTip(bills[0]), // napiwek dla 125
-  calcTip(bills[1]), // napiwek dla 555
-  calcTip(bills[2]), // napiwek dla 44
-];
+// Jonas has 3 friends ,and his best firend is called Michael
 
-// Wyświetlamy tablicę napiwków w konsoli
-console.log(tips); // ➡️ [18.75, 111, 8.8]
-
-const total = [tips[0] + bills[0], tips[1] + bills[1], tips[2] + bills[2]];
-
-console.log(`Total: ${total}`);
+console.log(
+  `${jonas.firstName} has ${jonas.friends.length} friends ,and his best friend is called ${jonas.friends[1]}`
+);
