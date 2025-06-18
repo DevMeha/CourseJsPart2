@@ -225,39 +225,92 @@
 
 // DOT VS BRACKET NOTATION
 
-const jonas = {
-  firstName: "Jonas",
-  lastName: "Schmedtmann",
-  age: "techer",
-  friends: ["Michael", "Peter", "Steven"],
-};
+// const jonas = {
+//   firstName: "Jonas",
+//   lastName: "Schmedtmann",
+//   age: "techer",
+//   friends: ["Michael", "Peter", "Steven"],
+// };
 
-console.log(jonas.lastName);
-console.log(jonas["lastName"]);
+// console.log(jonas.lastName);
+// console.log(jonas["lastName"]);
 
-const nameKey = "Name";
-console.log(jonas["first" + nameKey]);
-console.log(jonas["last" + nameKey]);
+// const nameKey = "Name";
+// console.log(jonas["first" + nameKey]);
+// console.log(jonas["last" + nameKey]);
 
-const interestedIn = prompt(
-  "what do you whant to know about Jonas? Chose between firstName, Lastname, age, job, and firends"
-);
+// const interestedIn = prompt(
+//   "what do you whant to know about Jonas? Chose between firstName, Lastname, age, job, and firends"
+// );
 
-if (jonas[interestedIn]) {
-  console.log(jonas[interestedIn]);
-} else {
-  console.log(
-    "Wrong request!  Chose between firstName, Lastname, age, job, and firends"
-  );
-}
-jonas.location = "Portugal";
-jonas["twitter"] = "@jonasschmedtman";
-console.log(jonas);
+// if (jonas[interestedIn]) {
+//   console.log(jonas[interestedIn]);
+// } else {
+//   console.log(
+//     "Wrong request!  Chose between firstName, Lastname, age, job, and firends"
+//   );
+// }
+// jonas.location = "Portugal";
+// jonas["twitter"] = "@jonasschmedtman";
+// console.log(jonas);
 
-// CHALLENGE
+// // CHALLENGE
 
-// Jonas has 3 friends ,and his best firend is called Michael
+// // Jonas has 3 friends ,and his best firend is called Michael
 
-console.log(
-  `${jonas.firstName} has ${jonas.friends.length} friends ,and his best friend is called ${jonas.friends[1]}`
-);
+// console.log(
+//   `${jonas.firstName} has ${jonas.friends.length} friends ,and his best friend is called ${jonas.friends[1]}`
+// );
+
+// const jonas = {
+//   firstName: "Jonas",
+//   lastName: "Schmedtmann",
+//   birthYeah: 1991,
+//   age: "techer",
+//   friends: ["Michael", "Peter", "Steven"],
+//   hasDriversLicence: true,
+
+//   // calcAge: function (birthYeah) {
+//   //   return 2037 - birthYeah;
+//   // },
+// };
+
+// console.log(jonas.calcAge());
+// // console.log(jonas["calcAge"](1991));
+
+// TEST
+
+// Tworzymy obiekt 'mark' z właściwościami: pełne imię, masa, wzrost i metoda obliczania BMI
+// const mark = {
+//   fullName: 'Mark Miller',
+//   mass: 78,
+//   height: 1.69,
+//   calcBMI: function () {
+//     this.bmi = this.mass / (this.height * this.height); // Obliczamy BMI i zapisujemy jako nową właściwość 'bmi'
+//     return this.bmi; // Zwracamy obliczone BMI
+//   }
+// };
+
+// // Tworzymy obiekt 'john' z takimi samymi właściwościami i metodą
+// const john = {
+//   fullName: 'John Smith',
+//   mass: 92,
+//   height: 1.95,
+//   calcBMI: function () {
+//     this.bmi = this.mass / (this.height * this.height); // Obliczamy BMI i zapisujemy
+//     return this.bmi;
+//   }
+// };
+
+// // Wywołujemy metody calcBMI(), żeby zapisać wartości bmi do obiektów
+// mark.calcBMI();
+// john.calcBMI();
+
+// // Porównujemy wartości BMI i wypisujemy odpowiedni komunikat
+// if (mark.bmi > john.bmi) {
+//   console.log(`${mark.fullName}'s BMI (${mark.bmi.toFixed(1)}) is higher than ${john.fullName}'s (${john.bmi.toFixed(1)})!`);
+// } else if (mark.bmi < john.bmi) {
+//   console.log(`${john.fullName}'s BMI (${john.bmi.toFixed(1)}) is higher than ${mark.fullName}'s (${mark.bmi.toFixed(1)})!`);
+// } else {
+//   console.log(`${mark.fullName} and ${john.fullName} have the same BMI (${mark.bmi.toFixed(1)})`);
+// }
