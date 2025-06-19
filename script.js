@@ -330,6 +330,37 @@
 
 // for loop keeps running while codition os TRUE
 
-for (let rep = 1; rep <= 10; rep++) {
-  console.log(`Lifting weights repetition ${rep}`);
+// for (let rep = 1; rep <= 10; rep++) {
+//   console.log(`Lifting weights repetition ${rep}`);
+// }
+
+// for (let i = 0; i < jonasArray.length; i++) {
+//   console.log(jonasArray[i]);
+// }
+// const years = [1991, 2007, 1969, 2020];
+// const age = [];
+
+// for (let i = 0; i < years.length; i++) {
+//   age.push(2025 - years[i]);
+// }
+// console.log(age);
+
+const jonasArray = [
+  "jonas",
+  "schmedtman",
+  2037 - 1991,
+  "teacher",
+  ["Michael", "Peter", "Steven"],
+];
+
+console.log("----ONLY STRINGS----");
+for (let i = 0; i < jonasArray.length; i++) {
+  if (typeof jonasArray[i] !== "string") continue;
+  console.log(jonasArray[i], typeof jonasArray[i]);
+}
+
+console.log("----BREAK WITH NUMBERS----");
+for (let i = 0; i < jonasArray.length; i++) {
+  if (typeof jonasArray[i] == "number") break;
+  console.log(jonasArray[i], typeof jonasArray[i]);
 }
