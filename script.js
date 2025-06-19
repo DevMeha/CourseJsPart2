@@ -390,19 +390,38 @@
 
 // WHILE
 
-let rep = 1;
+// let rep = 1;
 
-while (rep <= 10) {
-  // console.log(`WHILE: Lifting weights repetition ${rep} `);
-  rep++;
-}
-let dice = Math.trunc(Math.random() * 6) + 1;
-if (dice === 6) {
-  console.log("Loop didint start because 6 was rolled immediately");
-} else {
-  while (dice !== 6) {
-    console.log(`You rolled a ${dice}`);
-    dice = Math.trunc(Math.random() * 6) + 1;
-    if (dice === 6) console.log("Loop is about to end...");
-  }
-}
+// while (rep <= 10) {
+//   // console.log(`WHILE: Lifting weights repetition ${rep} `);
+//   rep++;
+// }
+// let dice = Math.trunc(Math.random() * 6) + 1;
+// if (dice === 6) {
+//   console.log("Loop didint start because 6 was rolled immediately");
+// } else {
+//   while (dice !== 6) {
+//     console.log(`You rolled a ${dice}`);
+//     dice = Math.trunc(Math.random() * 6) + 1;
+//     if (dice === 6) console.log("Loop is about to end...");
+//   }
+// }
+
+// CHALLENGE
+
+// const calcTip = function (bill) {
+//   return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+// };
+
+// const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+
+// const tips = [];
+// const totals = [];
+
+// for (let i = 0; i < bills.length; i++) {
+//   const tip = calcTip(bills[i]);
+//   tips.push(tip);
+//   totals.push(tip + bills[i]);
+// }
+// console.log(tips);
+// console.log(totals);
